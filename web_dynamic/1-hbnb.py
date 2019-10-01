@@ -27,7 +27,7 @@ def teardown_db(exception):
 @app.route('/1-hbnb')
 def hbnb_filters(the_id=None):
     """
-    old route = /hbnb; new route = /0-hbnb
+    old route = /hbnb; new route = /1-hbnb
     handles request to custom template with states, cities & amentities
     """
     state_objs = storage.all('State').values()
@@ -37,7 +37,7 @@ def hbnb_filters(the_id=None):
     users = dict([user.id, "{} {}".format(user.first_name, user.last_name)]
                  for user in storage.all('User').values())
 
-    return render_template('0-hbnb.html',
+    return render_template('1-hbnb.html',
                            states=states,
                            amens=amens,
                            places=places,
