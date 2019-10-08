@@ -17,9 +17,11 @@ header {
   border-radius: 100%;
   height: 40px;
   background-color: #cccccc;
-  margin-right: 30px;
+  right: 30px;
+  position: fixed;
+  top: 12px;
 }
 
-.available {
+#api_status.available {
   background-color: #ff545f;
 }
